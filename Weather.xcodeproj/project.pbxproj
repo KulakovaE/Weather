@@ -14,6 +14,7 @@
 		18380928237EA55500927CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18380927237EA55500927CF8 /* Assets.xcassets */; };
 		1838092B237EA55500927CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18380929237EA55500927CF8 /* LaunchScreen.storyboard */; };
 		18380937237ED90800927CF8 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18380936237ED90800927CF8 /* WeatherManager.swift */; };
+		1838095D23804A3F00927CF8 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838095C23804A3F00927CF8 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1838092A237EA55500927CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1838092C237EA55500927CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18380936237ED90800927CF8 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		1838095C23804A3F00927CF8 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				18380936237ED90800927CF8 /* WeatherManager.swift */,
+				1838095C23804A3F00927CF8 /* WeatherData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18380923237EA55400927CF8 /* ViewController.swift in Sources */,
+				1838095D23804A3F00927CF8 /* WeatherData.swift in Sources */,
 				1838091F237EA55400927CF8 /* AppDelegate.swift in Sources */,
 				18380937237ED90800927CF8 /* WeatherManager.swift in Sources */,
 				18380921237EA55400927CF8 /* SceneDelegate.swift in Sources */,
