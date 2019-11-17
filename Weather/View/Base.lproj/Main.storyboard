@@ -59,8 +59,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bHi-HF-70m">
                                 <rect key="frame" x="228" y="82" width="166" height="232"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GIA-wX-XJc">
-                                        <rect key="frame" x="8" y="7.5" width="150" height="150.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="snow" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GIA-wX-XJc">
+                                        <rect key="frame" x="8" y="10" width="150" height="146.5"/>
                                         <color key="tintColor" red="0.27283993363380432" green="0.61260437965393066" blue="0.80416578054428101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Gf2-6G-qxe"/>
@@ -114,6 +114,6 @@
         <image name="background" width="640" height="360"/>
         <image name="location.circle.fill" catalog="system" width="64" height="60"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
-        <image name="sun.max.fill" catalog="system" width="64" height="62"/>
+        <image name="snow" catalog="system" width="60" height="64"/>
     </resources>
 </document>
