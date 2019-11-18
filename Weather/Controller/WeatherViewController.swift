@@ -11,16 +11,24 @@ import CoreLocation
 
 class WeatherViewController: UIViewController {
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var currentLocationBtn: UIButton!
+    @IBOutlet weak var searchBtn: UIButton!
     
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
     
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(scheduleTimer), name: UIApplication.didBecomeActiveNotification, object: nil)
+        changeBackground()
         
         locationManager.delegate = self//befor requestLocation to not crash your app
         locationManager.requestWhenInUseAuthorization()
@@ -28,11 +36,32 @@ class WeatherViewController: UIViewController {
         
         weatherManager.delegate = self
         searchTextField.delegate = self
-        
-        
     }
+    
     @IBAction func locationPressed(_ sender: UIButton) {
         locationManager.requestLocation()
+    }
+    
+    @objc func scheduleTimer() {
+        timer = Timer(fireAt: Calendar.current.nextDate(after: Date(), matching: DateComponents(hour: 6..<24 ~= Date().hour ? 24 : 6), matchingPolicy: .nextTime)!, interval: 0, target: self, selector: #selector(changeBackground), userInfo: nil, repeats: false)
+        print(timer.fireDate)
+        RunLoop.main.add(timer, forMode: .common)
+        print("new Background chenge scheduled at :", timer.fireDate.description(with: .current))
+    }
+    
+    @objc func changeBackground() {
+        let hour = Date().hour
+        switch hour {
+        case 6...17:
+            return backgroundImageView.image = UIImage(named: "Sun")
+        case 18...24:
+            return backgroundImageView.image = UIImage(named: "Blood")
+        default:
+            backgroundImageView.image = UIImage(named: "Moon")
+            conditionImageView.tintColor = .white
+            currentLocationBtn.tintColor = .white
+            searchBtn.tintColor = .white
+        }
     }
 }
 
@@ -95,5 +124,13 @@ extension WeatherViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+}
+
+//MARK: - Date
+
+extension Date {
+    var hour: Int {
+        return Calendar.current.component(.hour, from: self)
     }
 }

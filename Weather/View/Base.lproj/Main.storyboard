@@ -27,6 +27,7 @@
                                             <constraint firstAttribute="width" constant="30" id="tfx-ko-DPh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" red="0.72400718929999996" green="0.37457120420000001" blue="0.3531756103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="location.circle.fill" catalog="system"/>
                                         <connections>
                                             <action selector="locationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVn-X9-Gsc"/>
@@ -44,6 +45,7 @@
                                             <constraint firstAttribute="width" constant="30" id="Ppd-lS-2tC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" red="0.72400718929999996" green="0.37457120420000001" blue="0.3531756103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="magnifyingglass" catalog="system"/>
                                         <connections>
                                             <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="die-3C-fQR"/>
@@ -100,8 +102,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="bL5-hS-bmY" id="Q6M-4K-ebl"/>
                         <outlet property="cityLabel" destination="9wc-Ks-OAn" id="gnh-dr-SNs"/>
                         <outlet property="conditionImageView" destination="GIA-wX-XJc" id="5MK-nW-UIh"/>
+                        <outlet property="currentLocationBtn" destination="Qe6-Bk-z5R" id="hHZ-Zp-D5E"/>
+                        <outlet property="searchBtn" destination="0WZ-pD-dM1" id="g3w-Xt-oA8"/>
                         <outlet property="searchTextField" destination="BYC-lL-MJM" id="1SP-Kv-7n5"/>
                         <outlet property="temperatureLabel" destination="Xrr-Py-4DM" id="yQJ-73-omV"/>
                     </connections>
@@ -112,7 +117,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Blood" width="750" height="1334"/>
+        <image name="Blood" width="375" height="667"/>
         <image name="location.circle.fill" catalog="system" width="64" height="60"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="snow" catalog="system" width="60" height="64"/>

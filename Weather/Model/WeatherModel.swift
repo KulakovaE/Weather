@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 //Model to hold on our Data
 struct WeatherModel {
     let conditionId: Int // stored property, they are storing a pice of Data
