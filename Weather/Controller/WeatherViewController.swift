@@ -21,11 +21,17 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        weatherManager.delegate = self
-        searchTextField.delegate = self
         
         locationManager.delegate = self//befor requestLocation to not crash your app
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        weatherManager.delegate = self
+        searchTextField.delegate = self
+        
+        
+    }
+    @IBAction func locationPressed(_ sender: UIButton) {
         locationManager.requestLocation()
     }
 }
