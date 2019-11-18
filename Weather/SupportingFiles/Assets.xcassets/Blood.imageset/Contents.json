@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Blood.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Blood.png",
       "scale" : "2x"
     },
     {
