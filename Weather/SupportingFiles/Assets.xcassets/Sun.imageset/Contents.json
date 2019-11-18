@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Sun.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "7243-01-low-poly-background-16x9-1.jpg",
       "scale" : "2x"
     },
     {
